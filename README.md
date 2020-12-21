@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# whatsapp
+
+A clone of the whatsapp web built on vue and firebase with the main features
