@@ -1,0 +1,24 @@
+.Chatroom {
+	&__details {
+		&__message {
+			display: flex;
+			&__svg {
+				height: 2rem;
+				align-self: center;
+				margin-left: 1.8rem;
+			}
+			&__input {
+				width: 85%;
+				background-color: $dark-light;
+				padding: 1.3rem 1.6rem;
+				border-radius: 3rem;
+				border: none;
+				font-size: 1.3rem;
+				font-family: 'Segoe UI';
+				font-weight: 600;
+				color: $white;
+				margin-left: 1.4rem;
+			}
+		}
+	}
+}

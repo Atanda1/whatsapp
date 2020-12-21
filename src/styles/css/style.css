@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Source+Sans+Pro&display=swap");
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #B1B3B5;
+}
+
+html {
+  font-size: 70%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #090E11;
+  height: 100vh;
+}
+@media screen and (max-width: 320px) {
+  body {
+    margin: 0.2rem;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input {
+  text-decoration: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+input::focus {
+  background-position: 40% 50%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Segoe UI Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"), url("../../font/SegoeUI.woff") format("woff");
+}
+@font-face {
+  font-family: "Segoe UI Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Italic"), url("../../font/SegoeUIItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../../font/SegoeUIBold.woff") format("woff");
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131C21;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #394045;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #394045;
+}
+
+.Chatroom {
+  grid-column: col-start/col-end;
+  height: 95vh;
+  min-height: min-content;
+  display: grid;
+  grid-template-columns: 28% 72%;
+  color: white;
+  margin: 2rem 0rem;
+}
+.Chatroom__list__search {
+  background-color: #131C21;
+}
+.Chatroom__list__search input {
+  width: 85%;
+  margin: 2% 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: #2A2F32;
+  background-image: url("../../assets/search.svg");
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: 4% 50%;
+  font-size: 1.1rem;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  color: #131C21;
+}
+.Chatroom__list__search input[type=text]::placeholder {
+  padding-left: 3rem;
+}
+.Chatroom__list__messages {
+  background-color: #131C21;
+  border-top: 1px solid #2A2F32;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  overflow-y: auto;
+}
+.Chatroom__list__messages__img {
+  padding: 0.9rem;
+}
+.Chatroom__list__messages__img img {
+  height: 4.7rem;
+  border-radius: 50%;
+  margin-right: auto;
+}
+.Chatroom__list__messages__message {
+  text-align: initial;
+  padding: 1.2rem 1.5rem 0.6rem 0;
+  border-bottom: 1px solid #2A2F32;
+}
+.Chatroom__list__messages__message__name {
+  font-family: "Segoe UI";
+  display: flex;
+}
+.Chatroom__list__messages__message__name__indi {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.Chatroom__list__messages__message__name__time {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+.Chatroom__list__messages__message__details {
+  font-weight: 100;
+  margin-top: 0.8rem;
+}
+
+.Chatroom__details__message {
+  display: flex;
+}
+.Chatroom__details__message__svg {
+  height: 2rem;
+  align-self: center;
+  margin-left: 1.8rem;
+}
+.Chatroom__details__message__input {
+  width: 85%;
+  background-color: #2A2F32;
+  padding: 1.3rem 1.6rem;
+  border-radius: 3rem;
+  border: none;
+  font-size: 1.3rem;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  color: white;
+  margin-left: 1.4rem;
+}
+
+.Chatroom__details__userprofile, .Chatroom__list__profile {
+  background-color: #2A2F32;
+  padding: 1rem 2rem 1rem 2rem;
+  justify-content: center;
+  display: flex;
+}
+
+.Chatroom__list__profile__img {
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: auto;
+}
+
+.Chatroom__details__userprofile__chat, .Chatroom__list__profile__chat {
+  height: 2rem;
+  align-self: center;
+  margin-right: 1.5rem;
+}
+
+.Chatroom__details__userprofile {
+  border-left: 1px solid rgba(241, 241, 242, 0.11);
+}
+.Chatroom__details__userprofile__img {
+  height: 3rem;
+  border-radius: 50%;
+}
+.Chatroom__details__userprofile__name {
+  margin-right: auto;
+  margin-left: 1.5rem;
+  align-self: center;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 300;
+}
+.Chatroom__details__chat {
+  height: 85%;
+  min-height: min-content;
+  background-image: url("../../assets/backdrop.jpg");
+  background-position: center;
+  background-size: contain;
+  overflow-y: auto;
+}
+.Chatroom__details__message {
+  background-color: #131C21;
+  padding: 0.8rem 1rem;
+  align-items: center;
+}
+
+.header__heading-1 {
+  font-size: 4rem;
+}
+.header__heading-2 {
+  font-size: 3rem;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: min-content repeat(5, min-content) 23vh;
+  grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 43vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 28vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

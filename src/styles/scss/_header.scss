@@ -1,0 +1,55 @@
+%headerProfile {
+	background-color: $dark-light;
+	padding: 1rem 2rem 1rem 2rem;
+	justify-content: center;
+	display: flex;
+}
+
+%headerImage {
+	height: 3rem;
+	border-radius: 50%;
+	margin-right: auto;
+}
+
+%headerChat {
+	height: 2rem;
+	align-self: center;
+	margin-right: 1.5rem;
+}
+
+.Chatroom {
+	&__details {
+		&__userprofile {
+			border-left: 1px solid rgb(241, 241, 242, 0.11);
+			@extend %headerProfile;
+			&__img {
+				height: 3rem;
+				border-radius: 50%;
+			}
+			&__chat {
+				@extend %headerChat;
+			}
+			&__name {
+				margin-right: auto;
+				margin-left: 1.5rem;
+				align-self: center;
+				font-size: 1.2rem;
+				color: $white;
+				font-weight: 300;
+			}
+		}
+		&__chat {
+			height: 85%;
+			min-height: min-content;
+			background-image: url('../../assets/backdrop.jpg');
+			background-position: center;
+			background-size: contain;
+			overflow-y: auto;
+		}
+		&__message {
+			background-color: $dark-black;
+			padding: .8rem 1rem;
+			align-items: center;
+		}
+	}
+}
