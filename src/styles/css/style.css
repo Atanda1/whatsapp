@@ -22,9 +22,7 @@ time, mark, audio, video {
   margin-block-start: 0;
   margin-block-end: 0;
   display: block;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #B1B3B5;
+  font-family: "Segoe UI", "Poppins", sans-serif;
 }
 
 html {
@@ -229,6 +227,28 @@ table {
   margin-right: 1.5rem;
 }
 
+.Chatroom__details__chat__sent span, .Chatroom__details__chat__received span {
+  font-size: 0.9rem;
+  text-align: end;
+  color: #B1B3B5;
+}
+
+.Chatroom__details__chat__sent, .Chatroom__details__chat__received {
+  position: relative;
+  max-width: 40rem;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  height: min-content;
+  padding: 1.2rem 1rem 0.7rem 0.5rem;
+  font-size: 1.3rem;
+  text-align: left;
+  line-height: 1.7rem;
+  font-weight: 100;
+  color: white;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
 .Chatroom__details__userprofile {
   border-left: 1px solid rgba(241, 241, 242, 0.11);
 }
@@ -240,17 +260,27 @@ table {
   margin-right: auto;
   margin-left: 1.5rem;
   align-self: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
-  font-weight: 300;
+  font-weight: 500;
 }
 .Chatroom__details__chat {
-  height: 85%;
-  min-height: min-content;
+  height: 75vh;
+  position: static;
   background-image: url("../../assets/backdrop.jpg");
   background-position: center;
   background-size: contain;
   overflow-y: auto;
+  padding: 3rem 8rem;
+}
+.Chatroom__details__chat__received {
+  border-radius: 0 1rem 1rem 1rem;
+  background-color: #2A2F32;
+}
+.Chatroom__details__chat__sent {
+  border-radius: 1rem 0 1rem 1rem;
+  background-color: #056162;
+  margin-left: auto;
 }
 .Chatroom__details__message {
   background-color: #131C21;

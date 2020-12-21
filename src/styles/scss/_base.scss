@@ -12,6 +12,7 @@ $small-font: 1.1rem;
 $small: 300px;
 $medium: 1200px;
 $large: 2000px;
+$mint: #056162;
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins|Source+Sans+Pro&display=swap');
@@ -39,9 +40,8 @@ time, mark, audio, video {
     margin-block-start: 0;
     margin-block-end: 0;
     display: block;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: $font-colour;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    // color: $font-colour;
  //   outline: 2px solid red;
 }
 
