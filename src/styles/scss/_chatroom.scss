@@ -8,6 +8,11 @@
 	margin: 2rem 0rem;
 
 	&__list {
+		&__ {
+			height: 84vh;
+			position: static;
+			overflow-y: auto;
+		}
 		&__profile {
 			@extend %headerProfile;
 			&__img {

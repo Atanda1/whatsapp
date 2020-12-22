@@ -127,6 +127,11 @@ table {
   color: white;
   margin: 2rem 0rem;
 }
+.Chatroom__list__ {
+  height: 84vh;
+  position: static;
+  overflow-y: auto;
+}
 .Chatroom__list__search {
   background-color: #131C21;
 }
