@@ -17,6 +17,7 @@
 		}
 		&__profile {
 			@extend %headerProfile;
+			border-right: 1px solid rgba(241, 241, 242, 0.11);
 			&__img {
 				@extend %headerImage;
 			}
