@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <chatroom/>
-    
+    <chatroom/>  
   </div>
 </template>
 
@@ -16,14 +15,6 @@ export default {
 }
 </script>
 
-<style>
-* {
-  margin: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-  background-color: #090E11;
-  height: 100vh; 
-}
+<style lang="scss">
+
 </style>

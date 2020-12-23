@@ -142,3 +142,53 @@ table {
   ::-webkit-scrollbar-thumb:hover {
     background: $dark-scroll; 
   }
+
+  .tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  	left: -20px;
+	right: auto;
+  	top: -4px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: $dark-light transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  	left: -10px;
+	right: auto;
+  	top: 0px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: $dark-light transparent transparent transparent;
+}
+
+.tri-right.border.right-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: -10px;
+    top: -8px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: $mint transparent transparent transparent;
+}
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: -10px;
+    top: 0px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: $mint transparent transparent transparent;
+}

@@ -118,6 +118,58 @@ table {
   background: #394045;
 }
 
+.tri-right.border.left-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: -4px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: #2A2F32 transparent transparent transparent;
+}
+
+.tri-right.left-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -10px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: #2A2F32 transparent transparent transparent;
+}
+
+.tri-right.border.right-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -10px;
+  top: -8px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: #056162 transparent transparent transparent;
+}
+
+.tri-right.right-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -10px;
+  top: 0px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: #056162 transparent transparent transparent;
+}
+
 .Chatroom {
   grid-column: col-start/col-end;
   height: 95vh;
@@ -131,9 +183,11 @@ table {
   height: 84vh;
   position: static;
   overflow-y: auto;
+  border-right: 1px solid rgba(241, 241, 242, 0.11);
 }
 .Chatroom__list__search {
   background-color: #131C21;
+  border-right: 1px solid rgba(241, 241, 242, 0.11);
 }
 .Chatroom__list__search input {
   width: 85%;

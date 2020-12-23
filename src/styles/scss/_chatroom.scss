@@ -12,6 +12,7 @@
 			height: 84vh;
 			position: static;
 			overflow-y: auto;
+			border-right: 1px solid rgba(241, 241, 242, 0.11);
 		}
 		&__profile {
 			@extend %headerProfile;
@@ -24,6 +25,7 @@
 		}
 		&__search {
 			background-color: $dark-black;
+			border-right: 1px solid rgba(241, 241, 242, 0.11);
 			& input {
 				width: 85%;
 				margin: 2% 0;
@@ -83,3 +85,5 @@
 		}
 	}
 }
+
+
