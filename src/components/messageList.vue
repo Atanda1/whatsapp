@@ -1,14 +1,16 @@
 <template>
-  <div class="hello">
-    
+  <div class="Chatroom__list__">
+    <chat-message/>
   </div>
 </template>
 
 <script>
+import ChatMessage from './chatMessage.vue'
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'messageList',
+  components: {
+    ChatMessage
   }
 }
 </script>

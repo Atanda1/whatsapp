@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "node-sass": "^5.0.0",
     "sass": "^1.30.0",
-    "vue": "^2.6.11",
-    "vue-cli-plugin-style-resources-loader": "^0.1.4"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

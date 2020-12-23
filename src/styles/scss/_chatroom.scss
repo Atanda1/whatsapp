@@ -13,6 +13,7 @@
 			position: static;
 			overflow-y: auto;
 			border-right: 1px solid rgba(241, 241, 242, 0.11);
+			border-top: 1px solid rgba(241, 241, 242, 0.11);
 		}
 		&__profile {
 			@extend %headerProfile;
@@ -48,7 +49,6 @@
 		}
 		&__messages {
 			background-color: $dark-black;
-			border-top: 1px solid $dark-light;
 			display: grid;
 			grid-template-columns: 20% 80%;
 			overflow-y: auto;
