@@ -99,6 +99,10 @@ table {
   margin-right: auto;
 }
 
+.mt-form {
+  margin-top: 2rem;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -268,6 +272,66 @@ table {
   font-weight: 600;
   color: white;
   margin-left: 1.4rem;
+}
+
+.Signup__shell__inner__input2, .Signup__shell__inner__input {
+  background-color: #2A2F32;
+  padding: 1rem 1.3rem;
+  border-radius: 1.6rem;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Segoe UI";
+  font-weight: 200;
+  color: white;
+}
+
+.Signup {
+  display: grid;
+  align-content: center;
+  grid-column: col-start/col-end;
+  height: inherit;
+}
+.Signup__shell {
+  min-height: min-content;
+  display: grid;
+  color: white;
+  margin: 0 auto;
+  align-content: center;
+  width: 25%;
+  background-color: #131C21;
+  padding: 4rem;
+}
+.Signup__shell__inner {
+  display: grid;
+  align-content: center;
+  color: #131C21;
+}
+.Signup__shell__inner img {
+  margin-bottom: 2rem;
+  justify-self: center;
+}
+.Signup__shell__inner__input {
+  margin-bottom: 1.5rem;
+}
+.Signup__shell__inner__button {
+  background-color: #075E54;
+  border-radius: 1.6rem;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Segoe UI";
+  font-weight: 400;
+  padding: 1rem 1.3rem;
+  margin-bottom: 2rem;
+}
+.Signup__shell__inner__button img {
+  height: 1.5rem;
+  margin: 0 auto;
+}
+.Signup__shell__inner__forgotPassword {
+  justify-self: right;
+  text-align: right;
+  color: #075E54;
+  margin-top: 0.2rem;
 }
 
 .Chatroom__details__userprofile, .Chatroom__list__profile {

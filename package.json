@@ -12,7 +12,9 @@
     "core-js": "^3.6.5",
     "node-sass": "^5.0.0",
     "sass": "^1.30.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-loading-overlay": "^3.4.2",
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
