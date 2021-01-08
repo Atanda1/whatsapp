@@ -2,6 +2,7 @@ import Chatroom from "../views/chatroom.vue";
 import Auth from "../layout/auth.vue";
 import Login from "../views/login.vue";
 import Signup from "../views/signup.vue";
+import ResetPassword from "../views/resetPassword.vue";
 import { auth } from "../firebase.js";
 import VueRouter from "vue-router";
 import Vue from "vue";
@@ -27,6 +28,14 @@ const routes = [
         path: "signup",
         component: Signup,
         name: "signup",
+        meta: {
+          requiresGuest: true,
+        },
+      },
+      {
+        path: "resetPassword",
+        component: ResetPassword,
+        name: "reset",
         meta: {
           requiresGuest: true,
         },

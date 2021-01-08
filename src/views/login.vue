@@ -13,7 +13,7 @@
       placeholder="Password"
       v-model="formData.password"
     />
-    <router-link :to="{ name: 'login' }"
+    <router-link :to="{ name: 'reset' }"
       ><h4 class="Signup__shell__inner__forgotPassword">
         Forgot Password
       </h4></router-link
@@ -25,7 +25,7 @@
     >
       Login
     </button>
-    <button class="Signup__shell__inner__button">
+    <button class="Signup__shell__inner__button" @click="signupWithGoogle">
       <img src="../assets/google.png" />
     </button>
     <router-link :to="{ name: 'signup' }"
@@ -50,9 +50,15 @@ export default {
     };
   },
   methods: {
-	login () {
-		this.$store.dispatch('login', { email: this.formData.email, password: this.formData.password })
-	},
-  }
+    login() {
+      this.$store.dispatch("login", {
+        email: this.formData.email,
+        password: this.formData.password,
+      });
+    },
+    signupWithGoogle() {
+      this.$store.dispatch("signUpWithGoogle");
+    },
+  },
 };
 </script>

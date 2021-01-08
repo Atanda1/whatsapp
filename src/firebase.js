@@ -20,6 +20,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const dbf = firebase.firestore();
 const db = firebase.database();
+var provider = new firebase.auth.GoogleAuthProvider();
 // collection references
 // const usersCollection = db.collection('users')
 // const postsCollection = db.collection('posts')
@@ -30,7 +31,8 @@ const db = firebase.database();
 export {
   db,
   auth,
-  dbf
+  dbf,
+  provider
 //   usersCollection,
 //   postsCollection,
 //   commentsCollection,

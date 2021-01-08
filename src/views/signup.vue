@@ -32,7 +32,7 @@
       />
     </div>
     <button class="Signup__shell__inner__button mt-form" type="submit" @click="signup">Signup</button>
-    <button class="Signup__shell__inner__button">
+    <button class="Signup__shell__inner__button" @click="signupWithGoogle">
       <img src="../assets/google.png" />
     </button>
     <router-link :to="{ name: 'login' }"
@@ -71,8 +71,10 @@ export default {
       this.formData.image = files[0];
 	},
 	signup() {
-		console.log(this.formData);
 		this.$store.dispatch('signup', this.formData)
+	},
+	signupWithGoogle () {
+		this.$store.dispatch('signUpWithGoogle')
 	}
   },
 };
