@@ -5,16 +5,12 @@
 </template>
 
 <script>
-// import Chatroom from './views/chatroom.vue'
 
 export default {
   name: 'App',
-  // components: {
-  //   Chatroom
-  // }
 }
 </script>
 
 <style lang="scss">
-
+  @import './styles/css/style.css';
 </style>

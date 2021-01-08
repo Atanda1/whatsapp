@@ -1,6 +1,7 @@
 $grey : grey;
 $white : white;
 $black : black;
+$dark-mint: #075E54;
 $dark-light :  #2A2F32;
 $dark-black : #131C21;
 $thin-font: 200;
@@ -71,6 +72,11 @@ body {
 }
 ol, ul {
 	list-style: none;
+}
+button {
+    text-decoration: none;
+    -webkit-appearance: none;
+    outline: none;
 }
 blockquote, q {
 	quotes: none;

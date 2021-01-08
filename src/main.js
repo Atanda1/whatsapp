@@ -1,18 +1,23 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import App from './App.vue'
-import { routes } from './router'
+import router from './router'
+import store from './store'
+import { auth } from './firebase.js'
 
-Vue.use(VueRouter);
 
-const router = new VueRouter ({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-});
+
+
 
 Vue.config.productionTip = false
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+
+
+let app
+auth.onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+})

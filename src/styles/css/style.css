@@ -53,6 +53,12 @@ ol, ul {
   list-style: none;
 }
 
+button {
+  text-decoration: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -306,6 +312,20 @@ table {
   align-content: center;
   color: #131C21;
 }
+.Signup__shell__inner__image-upload {
+  color: #075E54;
+  text-align: left;
+  padding: 1.3rem 0.3rem;
+  font-size: 1.2rem;
+  height: 4rem;
+}
+.Signup__shell__inner__image-upload__icon {
+  height: 4rem;
+  margin: 0;
+}
+.Signup__shell__inner__image-upload > input {
+  display: none;
+}
 .Signup__shell__inner img {
   margin-bottom: 2rem;
   justify-self: center;
@@ -331,7 +351,8 @@ table {
   justify-self: right;
   text-align: right;
   color: #075E54;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  text-decoration-line: underline;
 }
 
 .Chatroom__details__userprofile, .Chatroom__list__profile {

@@ -27,6 +27,20 @@
 		display: grid;
 		align-content: center;
 		color: $dark-black;
+		&__image-upload {
+			color: $dark-mint;
+			text-align: left;
+			padding: 1.3rem .3rem;
+			font-size: 1.2rem;
+			height: 4rem;
+			&__icon {
+				height: 4rem;
+				margin: 0;
+			}
+			> input{
+				display: none;
+			}	
+		}
 		img {
 			margin-bottom: 2rem;
 			justify-self: center;
@@ -39,7 +53,7 @@
 			@extend %input;
 		}
 		&__button {
-			background-color: #075E54;
+			background-color: $dark-mint;
 			border-radius: 1.6rem;
 			border: none;
 			font-size: 1.2rem;
@@ -56,7 +70,8 @@
 			justify-self: right;
 			text-align: right;
 			color: #075E54;
-			margin-top: .2rem;
+			margin-top: .5rem;
+			text-decoration-line: underline;
 		}
 	}
 }
