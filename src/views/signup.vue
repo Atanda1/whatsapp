@@ -1,26 +1,42 @@
 <template>
-  <form class="Signup__shell__inner" @submit.prevent>
+  <form class="Signup__shell__inner" @submit.prevent="signup">
+     <loading-overlay
+      :active="loadingStatus"
+      :is-full-page="fullPage"
+      :loader="loader"
+      :width="width"
+      :height="height"
+      :backgroundColor="backgroundColor"
+      :opacity="0.5"
+    />
     <img src="../assets/whatsapp.png" />
     <input
       class="Signup__shell__inner__input"
       type="mail"
       placeholder="Email"
       v-model="formData.email"
+      required
     />
-    <input class="Signup__shell__inner__input" type="text" placeholder="Name" v-model="formData.name" />
+    <input
+      class="Signup__shell__inner__input"
+      type="text"
+      placeholder="Name"
+      v-model="formData.name"
+      required
+    />
     <input
       class="Signup__shell__inner__input2"
       type="password"
       placeholder="Password"
       v-model="formData.password"
+      required
     />
     <div class="Signup__shell__inner__image-upload">
-      <label for="file-input">
-        <h5>Upload profile picture</h5>
+      <h5>Upload profile picture</h5>
+      <label for="file-input">  
         <img
           class="Signup__shell__inner__image-upload__icon"
           src="../assets/save.png"
-          @click="onPickFile"
         />
       </label>
       <input
@@ -29,9 +45,15 @@
         ref="fileInput"
         accept="image/*"
         @change="onFilePicked"
+        required
       />
     </div>
-    <button class="Signup__shell__inner__button mt-form" type="submit" @click="signup">Signup</button>
+    <button
+      class="Signup__shell__inner__button mt-form"
+      type="submit"
+    >
+      Signup
+    </button>
     <button class="Signup__shell__inner__button" @click="signupWithGoogle">
       <img src="../assets/google.png" />
     </button>
@@ -50,11 +72,22 @@ export default {
     return {
       formData: {
         email: "",
-		password: "",
-		name: "",
+        password: "",
+        name: "",
         image: null,
       },
+      fullPage: false,
+      loader: "spinner",
+      width: 30,
+      height: 30,
+      backgroundColor: "#2A2F32",
+      opacity: 0.3,
     };
+  },
+  computed: {
+    loadingStatus() {
+      return this.$store.getters.loadingStatus
+    }
   },
   methods: {
     onPickFile() {
@@ -69,13 +102,19 @@ export default {
       });
       fileReader.readAsDataURL(files[0]);
       this.formData.image = files[0];
-	},
-	signup() {
-		this.$store.dispatch('signup', this.formData)
-	},
-	signupWithGoogle () {
-		this.$store.dispatch('signUpWithGoogle')
-	}
+    },
+    signup() {
+      console.log(this.formData)
+      this.$store.dispatch("uploadData", {
+        email: this.formData.email,
+        password: this.formData.password,
+        name: this.formData.name,
+        image: this.formData.image
+      });
+    },
+    signupWithGoogle() {
+      this.$store.dispatch("signUpWithGoogle");
+    },
   },
 };
 </script>

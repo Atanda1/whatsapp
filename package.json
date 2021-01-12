@@ -9,6 +9,7 @@
     "sass": "sass --watch src/styles/scss/_main.scss:src/styles/css/style.css"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "firebase": "^8.2.1",
@@ -17,6 +18,9 @@
     "vue": "^2.6.11",
     "vue-loading-overlay": "^3.4.2",
     "vue-router": "^3.4.9",
+    "vue-simple-spinner": "^1.2.10",
+    "vue-toasted": "^1.1.28",
+    "vue2-animate": "^2.1.4",
     "vuex": "^3.6.0"
   },
   "devDependencies": {

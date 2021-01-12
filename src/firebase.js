@@ -2,6 +2,7 @@ import { firebase } from '@firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth'
 import 'firebase/database'
+import 'firebase/storage'
 
 // firebase init - add your own config here
 const firebaseConfig = {
@@ -20,6 +21,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const dbf = firebase.firestore();
 const db = firebase.database();
+const ref = firebase.storage().ref();
 var provider = new firebase.auth.GoogleAuthProvider();
 // collection references
 // const usersCollection = db.collection('users')
@@ -32,6 +34,7 @@ export {
   db,
   auth,
   dbf,
+  ref,
   provider
 //   usersCollection,
 //   postsCollection,

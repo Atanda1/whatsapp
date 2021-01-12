@@ -1,17 +1,33 @@
 <template>
-  <form class="Signup__shell__inner" @submit.prevent>
+  <form
+    class="Signup__shell__inner"
+    style="animation-duration: 0.3s"
+    @submit.prevent="login"
+  >
+    <loading-overlay
+      :active="loadingStatus"
+      :is-full-page="fullPage"
+      :loader="loader"
+      :width="width"
+      :height="height"
+      :backgroundColor="backgroundColor"
+      :opacity="0.5"
+    />
+
     <img src="../assets/whatsapp.png" />
     <input
       class="Signup__shell__inner__input"
       type="text"
       placeholder="Email"
       v-model="formData.email"
+      :required="true"
     />
     <input
       class="Signup__shell__inner__input2"
       type="password"
       placeholder="Password"
       v-model="formData.password"
+      :required="true"
     />
     <router-link :to="{ name: 'reset' }"
       ><h4 class="Signup__shell__inner__forgotPassword">
@@ -21,7 +37,6 @@
     <button
       class="Signup__shell__inner__button mt-form"
       type="submit"
-      @click="login"
     >
       Login
     </button>
@@ -36,6 +51,7 @@
   </form>
 </template>
 
+
 <style scoped></style>
 
 <script>
@@ -47,10 +63,22 @@ export default {
         email: "",
         password: "",
       },
+      fullPage: false,
+      loader: "spinner",
+      width: 30,
+      height: 30,
+      backgroundColor: "#2A2F32",
+      opacity: 0.3,
     };
   },
+  computed: {
+    loadingStatus() {
+      return this.$store.getters.loadingStatus
+    }
+  },
   methods: {
-    login() {
+    login(e) {
+      e.preventDefault
       this.$store.dispatch("login", {
         email: this.formData.email,
         password: this.formData.password,

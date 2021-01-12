@@ -64,10 +64,10 @@ router.beforeEach((to, from, next) => {
   if (requiresAuth && !auth.currentUser) {
     next({ name: "login" });
   } else if (requiresGuest && auth.currentUser) {
-    next();
-  } else {
-    next();
-  }
+    next({ name: "chat" });
+  } 
+  else next();
+  
 });
 
 export default router;
