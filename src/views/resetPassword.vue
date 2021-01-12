@@ -40,6 +40,9 @@
 </style>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapActions, mapGetters } = createNamespacedHelpers("authen");
+
 export default {
   name: "Login",
   data() {
@@ -56,13 +59,17 @@ export default {
     };
   },
   computed: {
+     ...mapGetters({ loading: "loadingStatus"}),
     loadingStatus() {
-      return this.$store.getters.loadingStatus
+      return this.loading
     }
   },
   methods: {
+    ...mapActions({
+     reset: "resetPassword",
+     }),
 	reset () {
-		this.$store.dispatch('resetPassword', { email: this.formData.email })
+		this.reset({ email: this.formData.email })
 	},
   }
 };

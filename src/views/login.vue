@@ -34,10 +34,7 @@
         Forgot Password
       </h4></router-link
     >
-    <button
-      class="Signup__shell__inner__button mt-form"
-      type="submit"
-    >
+    <button class="Signup__shell__inner__button mt-form" type="submit">
       Login
     </button>
     <button class="Signup__shell__inner__button" @click="signupWithGoogle">
@@ -51,10 +48,11 @@
   </form>
 </template>
 
-
 <style scoped></style>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapActions, mapGetters } = createNamespacedHelpers("authen");
 export default {
   name: "Login",
   data() {
@@ -72,20 +70,25 @@ export default {
     };
   },
   computed: {
+    ...mapGetters({ loading: "loadingStatus"}),
     loadingStatus() {
-      return this.$store.getters.loadingStatus
-    }
+      return this.loading;
+    },
   },
   methods: {
+    ...mapActions({
+     userLogin: "login",
+     userSignupGoogle:"signUpWithGoogle"
+     }),
     login(e) {
-      e.preventDefault
-      this.$store.dispatch("login", {
+      e.preventDefault;
+      this.userLogin({
         email: this.formData.email,
         password: this.formData.password,
       });
     },
     signupWithGoogle() {
-      this.$store.dispatch("signUpWithGoogle");
+      this.userSignupGoogle();
     },
   },
 };

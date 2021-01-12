@@ -15,11 +15,16 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers("authen");
 export default {
 	name: 'userProfile',
 	methods: {
+		...mapActions({
+			userLogout: 'logout'
+		}),
 		logout() {
-			this.$store.dispatch('logout')
+			this.userLogout();
 		}
 	}
 }

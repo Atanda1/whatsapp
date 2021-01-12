@@ -66,6 +66,9 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapActions, mapGetters } = createNamespacedHelpers("authen");
+
 export default {
   name: "Signup",
   data() {
@@ -85,11 +88,16 @@ export default {
     };
   },
   computed: {
+    ...mapGetters({ loading: "loadingStatus"}),
     loadingStatus() {
-      return this.$store.getters.loadingStatus
+      return this.loading
     }
   },
   methods: {
+    ...mapActions({
+     upload: "uploadData",
+     userSignupGoogle:"signUpWithGoogle"
+     }),
     onPickFile() {
       this.$refs.fileInput.click();
     },
@@ -105,7 +113,7 @@ export default {
     },
     signup() {
       console.log(this.formData)
-      this.$store.dispatch("uploadData", {
+      this.upload({
         email: this.formData.email,
         password: this.formData.password,
         name: this.formData.name,
@@ -113,7 +121,7 @@ export default {
       });
     },
     signupWithGoogle() {
-      this.$store.dispatch("signUpWithGoogle");
+      this.userSignupGoogle();
     },
   },
 };
