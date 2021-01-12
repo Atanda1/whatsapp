@@ -44,7 +44,7 @@ import { createNamespacedHelpers } from "vuex";
 const { mapActions, mapGetters } = createNamespacedHelpers("authen");
 
 export default {
-  name: "Login",
+  name: "Reset",
   data() {
     return {
       formData: {
@@ -66,10 +66,10 @@ export default {
   },
   methods: {
     ...mapActions({
-     reset: "resetPassword",
+     resetItem: "resetPassword",
      }),
 	reset () {
-		this.reset({ email: this.formData.email })
+		this.resetItem({ email: this.formData.email })
 	},
   }
 };

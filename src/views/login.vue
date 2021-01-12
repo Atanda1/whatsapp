@@ -53,6 +53,7 @@
 <script>
 import { createNamespacedHelpers } from "vuex";
 const { mapActions, mapGetters } = createNamespacedHelpers("authen");
+
 export default {
   name: "Login",
   data() {

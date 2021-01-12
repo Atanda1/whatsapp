@@ -103,7 +103,6 @@ export default {
     },
     onFilePicked(event) {
       const files = event.target.files;
-      //let filename = files[0].name;
       const fileReader = new FileReader();
       fileReader.addEventListener("load", () => {
         this.imageUrl = fileReader.result;
