@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<user-profile/>
+		<user-profile :userImageUrl= "userImageUrl"/>
 		<search-bar/>
 		<message-list/>
 	</div>	
@@ -17,6 +17,11 @@ export default {
 		UserProfile,
 		SearchBar,
 		MessageList,
+	},
+	props: {
+		userImageUrl: {
+			type: String
+		}
 	}
 }
 </script>

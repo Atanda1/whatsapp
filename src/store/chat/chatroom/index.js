@@ -1,16 +1,16 @@
 import actions from './actions'
-import getters from './getters'
 import mutations from './mutations'
+import getters from './getters'
+
 
 const state = () => ({
-    loadingStatus: false,
+	userImage : '',
 })
-
 
 export default {
 	namespaced: true,
 	state,
 	actions,
-	getters,
-	mutations
+	mutations,
+	getters
 }

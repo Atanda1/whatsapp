@@ -1,11 +1,19 @@
-import { auth, provider } from "../../../firebase";
+import { auth, provider, dbf } from "../../../firebase";
 import router from "../../../router";
 
 const signUpWithGoogle = () => {
   auth
     .signInWithPopup(provider)
-    .then((result) => {
-      console.log(result);
+    .then((cred) => {
+      return dbf
+        .collection("users")
+        .doc(cred.user.uid)
+        .set({
+          name: cred.user.displayName,
+          image:  cred.user.photoURL,
+        });
+    })
+    .then(() => {
       router.push({ name: "chat" });
     })
     .catch((error) => {

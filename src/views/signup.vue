@@ -32,6 +32,7 @@
       required
     />
     <div class="Signup__shell__inner__image-upload">
+      <h5>{{ formData.imageName }}</h5>
       <h5>Upload profile picture</h5>
       <label for="file-input">  
         <img
@@ -77,6 +78,7 @@ export default {
         email: "",
         password: "",
         name: "",
+        imageName: "",
         image: null,
       },
       fullPage: false,
@@ -109,6 +111,8 @@ export default {
       });
       fileReader.readAsDataURL(files[0]);
       this.formData.image = files[0];
+      const fileName = this.$refs.fileInput.value;
+      this.formData.imageName = fileName.split("\\").pop();
     },
     signup() {
       console.log(this.formData)
