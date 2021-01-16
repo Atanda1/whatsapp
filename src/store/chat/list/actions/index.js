@@ -1,7 +1,8 @@
-import fetchNames from './fetchNames'
+import fetchUsers from './fetchUsers'
 
 
-export const actions = {
-	fetchNames
+const actions = {
+	fetchUsers
 }
 
+export default actions

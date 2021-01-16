@@ -1,7 +1,8 @@
 import { auth, provider, dbf } from "../../../firebase";
 import router from "../../../router";
 
-const signUpWithGoogle = () => {
+const signUpWithGoogle = ({commit}) => {
+  commit("loadingStatus", true);
   auth
     .signInWithPopup(provider)
     .then((cred) => {
@@ -11,9 +12,11 @@ const signUpWithGoogle = () => {
         .set({
           name: cred.user.displayName,
           image:  cred.user.photoURL,
+          uid: cred.user.uid
         });
     })
     .then(() => {
+      commit("loadingStatus", false);
       router.push({ name: "chat" });
     })
     .catch((error) => {

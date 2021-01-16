@@ -3,7 +3,7 @@ import { dbf, auth } from "../../../firebase";
 import router from "../../../router";
 
 const signup = ({ commit }, form) => {
-  console.log(form);
+  commit("loadingStatus", true);
   auth
     .createUserWithEmailAndPassword(form.email, form.password)
     .then((cred) => {
@@ -13,6 +13,7 @@ const signup = ({ commit }, form) => {
         .set({
           name: form.name,
           image: form.image,
+          uid:cred.user.uid
         });
     })
     .then(() => {

@@ -3,7 +3,7 @@
     <transition name="fade">
       <div class="container">
         <div class="Chatroom">
-          <chatroom-list :userImageUrl= "userImageUrl"/>
+          <chatroom-list :userImageUrl="userImageUrl" :getUsersChatData="getUsersChatData" />
           <chatroom-message />
         </div>
       </div>
@@ -16,6 +16,10 @@ import ChatroomList from "../components/chatroom-list/chatroomList.vue";
 import ChatroomMessage from "../components/chatroom-message/chatroomMessage.vue";
 import { createNamespacedHelpers } from "vuex";
 const { mapActions, mapGetters } = createNamespacedHelpers("chat/chatroom");
+const {
+  mapActions: listActions,
+  mapGetters: listGetters,
+} = createNamespacedHelpers("chat/list");
 
 export default {
   name: "Chatroom",
@@ -25,28 +29,41 @@ export default {
   },
   data() {
     return {
-      imageUrl : ''
-    }
+      imageUrl: "",
+    };
   },
   computed: {
     ...mapGetters({
-      getUserImage: "getImage" 
+      getUserImage: "getImage",
+    }),
+    ...listGetters({
+      getUsersData: "getUsers",
     }),
     userImageUrl() {
-      return this.getUserImage
-    }
+      return this.getUserImage;
+    },
+    getUsersChatData() {
+      return this.getUsersData;
+    },
   },
   methods: {
     ...mapActions({
-      userImage: "currentUserImage"
+      userImage: "currentUserImage",
+    }),
+    ...listActions({
+      fetchUsersData: "fetchUsers",
     }),
     image() {
       return this.userImage();
-    }
+    },
+    usersData() {
+      return this.fetchUsersData();
+    },
   },
-  mounted() {
+  created() {
     this.image();
-  }
+    this.usersData();
+  },
 };
 </script>
 

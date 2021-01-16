@@ -1,21 +1,24 @@
 <template>
   <div class="Chatroom__list__">
-    <chat-message/>
+    <chat-message :getUsersChatData="getUsersChatData" />
   </div>
 </template>
 
 <script>
-import ChatMessage from './chatMessage.vue'
+import ChatMessage from "./chatMessage.vue";
 
 export default {
-  name: 'messageList',
+  name: "messageList",
   components: {
-    ChatMessage
-  }
-}
+    ChatMessage,
+  },
+  props: {
+    getUsersChatData: {
+      type: Array,
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+<style scoped></style>

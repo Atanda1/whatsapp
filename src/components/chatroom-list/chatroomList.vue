@@ -2,7 +2,7 @@
 	<div>
 		<user-profile :userImageUrl= "userImageUrl"/>
 		<search-bar/>
-		<message-list/>
+		<message-list :getUsersChatData="getUsersChatData"/>
 	</div>	
 </template>
 
@@ -21,6 +21,9 @@ export default {
 	props: {
 		userImageUrl: {
 			type: String
+		},
+		getUsersChatData: {
+			type: Array
 		}
 	}
 }
