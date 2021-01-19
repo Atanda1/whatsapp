@@ -1,0 +1,45 @@
+.Placeholder {
+  &__div {
+    background-color: $holder-background;
+    height: 100%;
+    display: grid;
+	align-content: center;
+	border-bottom: 4px solid $dark-mint;
+  }
+  &__innerdiv {
+    width: 55%;
+	margin: 0 auto;
+  }
+  &__text {
+    &__main {
+      margin-top: 4rem;
+      // margin-bottom: 3rem;
+      font-size: 3rem;
+      font-family: "Segoe UI";
+      font-weight: 300;
+      color: $holder-font-colour;
+    }
+    &__sub {
+      color: $holder-small-font-colour;
+      line-height: 1.5rem;
+      width: 80%;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      padding: 3rem;
+      border-bottom: 1px solid #31383c;
+      &__small {
+		display: inline-flex;
+        color: #989a9d;
+        line-height: 2rem;
+        width: 80%;
+        padding: 3rem;
+        font-size: 1.1rem;
+        /* margin: 0 auto; */
+        justify-content: center;
+      }
+    }
+  }
+  &__image {
+    margin: 0 auto;
+  }
+}

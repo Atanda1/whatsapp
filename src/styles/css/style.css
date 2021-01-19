@@ -180,6 +180,51 @@ table {
   border-color: #056162 transparent transparent transparent;
 }
 
+.mr-sm {
+  margin-right: 0.2rem;
+}
+
+.Placeholder__div {
+  background-color: #262D31;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  border-bottom: 4px solid #075E54;
+}
+.Placeholder__innerdiv {
+  width: 55%;
+  margin: 0 auto;
+}
+.Placeholder__text__main {
+  margin-top: 4rem;
+  font-size: 3rem;
+  font-family: "Segoe UI";
+  font-weight: 300;
+  color: #B3B6B8;
+}
+.Placeholder__text__sub {
+  color: #989A9D;
+  line-height: 1.5rem;
+  width: 80%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 3rem;
+  border-bottom: 1px solid #31383c;
+}
+.Placeholder__text__sub__small {
+  display: inline-flex;
+  color: #989a9d;
+  line-height: 2rem;
+  width: 80%;
+  padding: 3rem;
+  font-size: 1.1rem;
+  /* margin: 0 auto; */
+  justify-content: center;
+}
+.Placeholder__image {
+  margin: 0 auto;
+}
+
 .Chatroom {
   grid-column: col-start/col-end;
   height: 95vh;

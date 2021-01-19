@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers("chat/chatroom");
 export default {
   name: "chatMessage",
   data() {
@@ -59,9 +61,14 @@ export default {
     },
   },
   methods: {
+    ...mapActions({
+      uploadChatInfo: "displayChatInfo"
+      }),
     openMessage(imageUrl, name, uid) {
       console.log(imageUrl, name, uid)
+      this.uploadChatInfo({imageUrl, name, uid})
       this.$root.$emit("passChatData", imageUrl, name, uid)
+      this.$root.$emit("passChatUserData", imageUrl, name, uid)
     }
   }
 };

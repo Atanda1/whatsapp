@@ -4,7 +4,7 @@
       <div class="container">
         <div class="Chatroom">
           <chatroom-list :userImageUrl="userImageUrl" :getUsersChatData="getUsersChatData" />
-          <chatroom-message />
+          <chatroom-message/>
         </div>
       </div>
     </transition>
@@ -63,7 +63,7 @@ export default {
   created() {
     this.image();
     this.usersData();
-  },
+  }
 };
 </script>
 

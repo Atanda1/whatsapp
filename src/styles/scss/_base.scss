@@ -3,9 +3,12 @@ $white : white;
 $black : black;
 $dark-mint: #075E54;
 $dark-light :  #2A2F32;
+$holder-background: #262D31;
 $dark-black : #131C21;
 $thin-font: 200;
 $font-colour: #B1B3B5;
+$holder-font-colour: #B3B6B8;
+$holder-small-font-colour: #989A9D;
 $text-font-family: Source Sans Pro;
 $dark-scroll:#394045;
 $text-font-colour: #6B7C93;
@@ -201,4 +204,11 @@ table {
 	bottom: auto;
 	border: 12px solid;
 	border-color: $mint transparent transparent transparent;
+}
+
+
+.mr {
+  &-sm {
+      margin-right: .2rem;
+  } 
 }

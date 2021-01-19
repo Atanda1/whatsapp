@@ -5,6 +5,9 @@ import getters from './getters'
 
 const state = () => ({
 	userImage : '',
+	imageUrl: '',
+	name: '',
+	uid: ''
 })
 
 export default {
