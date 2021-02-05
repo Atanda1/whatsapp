@@ -462,6 +462,9 @@ table {
   overflow-y: auto;
   padding: 3rem 8rem;
 }
+.Chatroom__details__chat__image {
+  height: 40rem;
+}
 .Chatroom__details__chat__received {
   border-radius: 0 1rem 1rem 1rem;
   background-color: #2A2F32;
@@ -475,6 +478,9 @@ table {
   background-color: #131C21;
   padding: 0.8rem 1rem;
   align-items: center;
+}
+.Chatroom__details__message__image-upload > input {
+  display: none;
 }
 
 .header__heading-1 {

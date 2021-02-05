@@ -67,6 +67,9 @@
 			background-size: contain;
 			overflow-y: auto;
 			padding: 3rem 8rem;
+			&__image {
+				height: 40rem;
+			}
 			&__received {
 				border-radius: 0 1rem 1rem 1rem;
 				background-color: $dark-light;
@@ -89,6 +92,11 @@
 			background-color: $dark-black;
 			padding: .8rem 1rem;
 			align-items: center;
+			&__image-upload {
+				> input{
+					display: none;
+				}	
+			}
 		}
 	}
 }

@@ -1,9 +1,11 @@
 import currentUserImage from './currentUserImage'
 import displayChatInfo from './displayChatInfo'
+import sendMessage from './sendMessage'
 
 const actions = {
 	currentUserImage,
-	displayChatInfo
+	displayChatInfo,
+	sendMessage
 }
 
 export default actions;
