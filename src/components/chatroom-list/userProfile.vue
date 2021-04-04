@@ -1,6 +1,12 @@
 <template>
   <div class="Chatroom__list__profile">
-    <img class="Chatroom__list__profile__img" :src="userImageUrl" />
+    <!-- <img class="Chatroom__list__profile__img" :src="userImageUrl" /> -->
+    <div
+      class="Chatroom__list__profile__img"
+      :style="{ backgroundImage: `url(${userImageUrl})` }"
+    >
+      <!-- <img :src="result.image" /> -->
+    </div>
     <svg
       id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6"
       xmlns="http://www.w3.org/2000/svg"
@@ -100,5 +106,20 @@ export default {
   justify-content: center;
   align-items: center;
   margin-right: auto;
+}
+
+.Chatroom__list__profile__img {
+  width: 3rem;
+  height: 3rem;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  /* margin: 7px 0 0 5px; */
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
 }
 </style>
