@@ -251,10 +251,12 @@ table {
 }
 .Chatroom__list__search {
   background-color: #131C21;
+  color: white;
   border-right: 1px solid rgba(241, 241, 242, 0.11);
 }
 .Chatroom__list__search input {
   width: 85%;
+  color: white;
   margin: 2% 0;
   padding: 0.8rem 1.6rem;
   border-radius: 3rem;
@@ -267,7 +269,6 @@ table {
   font-size: 1.1rem;
   font-family: "Segoe UI", "Poppins", sans-serif;
   font-weight: 600;
-  color: #131C21;
 }
 .Chatroom__list__search input[type=text]::placeholder {
   padding-left: 3rem;

@@ -27,9 +27,11 @@
     }
     &__search {
       background-color: $dark-black;
+			color: white;
       border-right: 1px solid rgba(241, 241, 242, 0.11);
       & input {
         width: 85%;
+				color: white;
         margin: 2% 0;
         padding: 0.8rem 1.6rem;
         border-radius: 3rem;
@@ -42,7 +44,7 @@
         font-size: 1.1rem;
         font-family: "Segoe UI", "Poppins", sans-serif;
         font-weight: 600;
-        color: $dark-black;
+        //color: $dark-black;
       }
       & input[type="text"]::placeholder {
         padding-left: 3rem;
