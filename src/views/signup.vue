@@ -55,9 +55,9 @@
     >
       Signup
     </button>
-    <button class="Signup__shell__inner__button" @click="signupWithGoogle">
+    <!-- <button class="Signup__shell__inner__button" @click="signupWithGoogle">
       <img src="../assets/google.png" />
-    </button>
+    </button> -->
     <router-link :to="{ name: 'login' }"
       ><h4 class="Signup__shell__inner__forgotPassword">
         You have an account? Login

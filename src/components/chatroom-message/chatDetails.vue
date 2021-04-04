@@ -36,8 +36,8 @@ export default {
     }),
     scrollDown() {
       const content = this.$refs.container;
-      content.scrollTop = content.scrollHeight;
-      console.log(content.scrollTop);
+			content.scrollTop = content.scrollHeight;
+			console.log(content.scrollTop);
       console.log(content.scrollHeight);
     },
     getAllMessages() {
@@ -81,10 +81,7 @@ export default {
   },
   watch: {
     messages: function() {
-      const [el] = this.$refs[`${Math.max()}`];
-      if (el) {
-        el.scrollIntoView();
-      }
+     this.scrollDown();
     },
   },
 };

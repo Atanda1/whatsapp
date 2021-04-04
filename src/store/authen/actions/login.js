@@ -15,7 +15,7 @@ const login = ({ commit }, form) => {
     .catch((error) => {
       commit("loadingStatus", false);
       //console.log(error);
-      Vue.toasted.show(error, {
+      Vue.toasted.show(error + "Do signup with your credentials", {
         position: "top-right",
         duration: 4000,
       });

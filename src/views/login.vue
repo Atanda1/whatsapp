@@ -37,9 +37,9 @@
     <button class="Signup__shell__inner__button mt-form" type="submit">
       Login
     </button>
-    <button class="Signup__shell__inner__button" @click="signupWithGoogle">
+    <!-- <button class="Signup__shell__inner__button" @click="signupWithGoogle">
       <img src="../assets/google.png" />
-    </button>
+    </button> -->
     <router-link :to="{ name: 'signup' }"
       ><h4 class="Signup__shell__inner__forgotPassword">
         You don't have an account? Signup
