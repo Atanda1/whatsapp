@@ -14,7 +14,7 @@
             {{result.name}}
           </div>
           <div class="Chatroom__list__messages__message__name__time">
-            yesterday
+            
           </div>
         </div>
         <div class="Chatroom__list__messages__message__details">
