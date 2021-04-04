@@ -338,7 +338,7 @@ table {
   border-radius: 3rem;
   border: none;
   font-size: 1.3rem;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", "Poppins", sans-serif;
   font-weight: 600;
   color: white;
   margin-left: 1.4rem;
@@ -350,7 +350,7 @@ table {
   border-radius: 1.6rem;
   border: none;
   font-size: 1.2rem;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", "Poppins", sans-serif;
   font-weight: 200;
   color: white;
 }
@@ -402,7 +402,7 @@ table {
   border-radius: 1.6rem;
   border: none;
   font-size: 1.2rem;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", "Poppins", sans-serif;
   font-weight: 400;
   padding: 1rem 1.3rem;
   margin-bottom: 2rem;
