@@ -30,7 +30,7 @@ html {
 }
 @media screen and (max-width: 1300px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 }
 
@@ -284,6 +284,11 @@ table {
 @media screen and (max-width: 1500px) {
   .Chatroom__list__messages {
     grid-template-columns: 2fr 7fr;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .Chatroom__list__messages {
+    grid-template-columns: 2fr 8fr;
   }
 }
 .Chatroom__list__messages__img {

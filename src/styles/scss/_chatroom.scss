@@ -1,96 +1,97 @@
 .Chatroom {
-	grid-column: col-start/col-end;
-	height: 95vh;
-	min-height: min-content;
-	display: grid;
-	grid-template-columns: 28% 72%;
-	color: $white;
-	margin: 2rem 0rem;
+  grid-column: col-start/col-end;
+  height: 95vh;
+  min-height: min-content;
+  display: grid;
+  grid-template-columns: 28% 72%;
+  color: $white;
+  margin: 2rem 0rem;
 
-	&__list {
-		&__ {
-			height: 84vh;
-			position: static;
-			overflow-y: auto;
-			border-right: 1px solid rgba(241, 241, 242, 0.11);
-			border-top: 1px solid rgba(241, 241, 242, 0.11);
-		}
-		&__profile {
-			@extend %headerProfile;
-			border-right: 1px solid rgba(241, 241, 242, 0.11);
-			&__img {
-				@extend %headerImage;
-			}
-			&__chat {
-				@extend %headerChat;
-			}
-		}
-		&__search {
-			background-color: $dark-black;
-			border-right: 1px solid rgba(241, 241, 242, 0.11);
-			& input {
-				width: 85%;
-				margin: 2% 0;
-				padding: .8rem 1.6rem;
-				border-radius: 3rem;
-				border: none;
-				background-color: $dark-light;
-				background-image: url('../../assets/search.svg');
-				background-size: 1.5rem;
-				background-repeat: no-repeat;
-				background-position:  4% 50%;
-				font-size: 1.1rem;
-				font-family: 'Segoe UI', "Poppins", sans-serif;
-				font-weight: 600;
-				color: $dark-black;
-			}
-			& input[type="text"]::placeholder {  
-                padding-left: 3rem; 
-            } 
-		}
-		&__messages {
-			background-color: $dark-black;
-			display: grid;
-			cursor: pointer;
-			grid-template-columns: 20% 80%;
-			overflow-y: auto;
-			align-items: center;
-			padding: 1rem;
-			@media screen and (max-width: 1500px) {
-				grid-template-columns: 2fr 7fr;
-		 }
-			&__img {
-				padding: .9rem;
-				img {
-					height: 4.7rem;
-					border-radius: 50%;
-					margin-right: auto;
-				}
-			}
-			&__message {
-				text-align: initial;
-				padding: 1.2rem 1.5rem 1.2rem 0;
-				border-bottom: 1px solid $dark-light;
-				&__name {
-					font-family: 'Segoe UI';
-					display: flex;					
-					&__indi {
-						margin-right: auto;	
-						font-size: 1.5rem;
-						font-weight: 400;
-					}
-					&__time {
-						font-size: .8rem;
-						font-weight: 200;
-					}
-				}
-				&__details {
-					font-weight: 100;
-					margin-top: .8rem;
-				}
-			}
-		}
-	}
+  &__list {
+    &__ {
+      height: 84vh;
+      position: static;
+      overflow-y: auto;
+      border-right: 1px solid rgba(241, 241, 242, 0.11);
+      border-top: 1px solid rgba(241, 241, 242, 0.11);
+    }
+    &__profile {
+      @extend %headerProfile;
+      border-right: 1px solid rgba(241, 241, 242, 0.11);
+      &__img {
+        @extend %headerImage;
+      }
+      &__chat {
+        @extend %headerChat;
+      }
+    }
+    &__search {
+      background-color: $dark-black;
+      border-right: 1px solid rgba(241, 241, 242, 0.11);
+      & input {
+        width: 85%;
+        margin: 2% 0;
+        padding: 0.8rem 1.6rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: $dark-light;
+        background-image: url("../../assets/search.svg");
+        background-size: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: 4% 50%;
+        font-size: 1.1rem;
+        font-family: "Segoe UI", "Poppins", sans-serif;
+        font-weight: 600;
+        color: $dark-black;
+      }
+      & input[type="text"]::placeholder {
+        padding-left: 3rem;
+      }
+    }
+    &__messages {
+      background-color: $dark-black;
+      display: grid;
+      cursor: pointer;
+      grid-template-columns: 20% 80%;
+      overflow-y: auto;
+      align-items: center;
+      padding: 1rem;
+      @media screen and (max-width: 1500px) {
+        grid-template-columns: 2fr 7fr;
+      }
+      @media screen and (max-width: 1500px) {
+        grid-template-columns: 2fr 8fr;
+      }
+      &__img {
+        padding: 0.9rem;
+        img {
+          height: 4.7rem;
+          border-radius: 50%;
+          margin-right: auto;
+        }
+      }
+      &__message {
+        text-align: initial;
+        padding: 1.2rem 1.5rem 1.2rem 0;
+        border-bottom: 1px solid $dark-light;
+        &__name {
+          font-family: "Segoe UI";
+          display: flex;
+          &__indi {
+            margin-right: auto;
+            font-size: 1.5rem;
+            font-weight: 400;
+          }
+          &__time {
+            font-size: 0.8rem;
+            font-weight: 200;
+          }
+        }
+        &__details {
+          font-weight: 100;
+          margin-top: 0.8rem;
+        }
+      }
+    }
+  }
 }
-
-
