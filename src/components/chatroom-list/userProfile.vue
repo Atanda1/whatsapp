@@ -1,6 +1,8 @@
 <template>
   <div class="Chatroom__list__profile">
-    <img class="Chatroom__list__profile__img" :src="userImageUrl" />
+    <div class="Chatroom__list__profile__circle__img">
+      <img class="Chatroom__list__profile__img" :src="userImageUrl" />
+    </div>
     <svg
       id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6"
       xmlns="http://www.w3.org/2000/svg"
@@ -86,10 +88,19 @@ export default {
   font-size: 16px;
   color: white;
   border: none;
-  background-color: #2A2F32;
-  box-shadow: 0px 0px .5px .5px #131C21;
+  background-color: #2a2f32;
+  box-shadow: 0px 0px 0.5px 0.5px #131c21;
 }
 .dropdown-content button:hover {
-	background-color: #20272B;
+  background-color: #20272b;
+}
+
+.Chatroom__list__profile__circle__img {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
 }
 </style>
