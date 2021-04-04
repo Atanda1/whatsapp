@@ -13,19 +13,6 @@ const chatMessage = (context) => {
       });
 			context.commit("setChatMessage", chatArray);
     })
-
-		dbf
-    .collection("messages")
-		.where("sender", "==", context.state.uid)
-		.where("receiver", "==", auth.currentUser.uid)
-    .onSnapshot((querySnapshot) => {
-      const chatArray = [];
-      querySnapshot.docs.map((doc) => {
-        chatArray.push(doc.data());
-      });
-			
-    })
-		
 };
 
 export default chatMessage; 

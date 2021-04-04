@@ -1,61 +1,23 @@
 <template>
-  <div class="Chatroom__details__chat"
-	>
-    <div class="Chatroom__details__chat__received tri-right left-top">
-      <p>If you have one bucket<span>1:00PM</span></p>
-    </div>
-    <div class="Chatroom__details__chat__received">
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.<span>1:20PM</span>
-      </p>
-    </div>
-    <div class="Chatroom__details__chat__sent  tri-right right-top">
-      <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).<span
-          >1:20PM</span
-        >
-      </p>
-    </div>
-    <div class="Chatroom__details__chat__received tri-right left-top">
-      <img
-        class="Chatroom__details__chat__image"
-        src="../../assets/productcycle.png"
-      />
-      <p>qwerty</p>
-    </div>
-
+  <div class="Chatroom__details__chat" ref="container">
     <div
       v-for="message in messages"
       :key="message.imageName"
-      v-bind:class="{
-        'Chatroom__details__chat__received tri-right left-top':
-          receiverUid === message.receiver,
-        'Chatroom__details__chat__sent  tri-right right-top':
-          currentUserUid === message.sender,
-      }"
+			:ref="`${messages.timestamp}`"
+      :class="
+        filter(message.receiver, message.sender)
+          ? 'Chatroom__details__chat__sent'
+          : 'Chatroom__details__chat__received'
+      "
     >
       <img
         v-if="message.image"
         class="Chatroom__details__chat__image"
         :src="message.image"
       />
-      <p>{{ message.message }}<span>1:20PM</span></p>
+      <p v-if="message.message">
+        {{ message.message }}<span>{{ message.time }}</span>
+      </p>
     </div>
   </div>
 </template>
@@ -67,38 +29,63 @@ const { mapActions, mapGetters } = createNamespacedHelpers("chat/chatroom");
 
 export default {
   name: "ChatDetails",
-	// data() {
-	// 	return {
-	// 		componentKey: 0
-	// 	}
-	// },
   methods: {
     ...mapActions({
       pullChatMessage: "chatMessage",
+      receivedChat: "receivedChatMessages",
     }),
+    scrollDown() {
+      const content = this.$refs.container;
+      content.scrollTop = content.scrollHeight;
+      console.log(content.scrollTop);
+      console.log(content.scrollHeight);
+    },
+    getAllMessages() {
+      // const totalMessages = []
+      console.log(this.getMessages);
+      console.log(this.getReceiverMessage);
+      if (this.getMessages && this.getReceiverMessage) {
+        const totalMessages = this.getMessages.concat(this.getReceiverMessage);
+        console.log(
+          totalMessages.sort((a, b) => new Date(b.time) - new Date(a.time))
+        );
+        return totalMessages.sort((a, b) => a.timestamp - b.timestamp);
+      }
+    },
+    filter(receiver, sender) {
+      if (this.currentUserUid === sender) {
+        return true;
+      } else if (this.receiverUid === receiver) {
+        return false;
+      }
+    },
   },
   computed: {
     ...mapGetters({
       getMessages: "getChat",
       getReceiver: "getReceiverUid",
+      getReceiverMessage: "getReceivedChat",
     }),
     messages() {
-      return this.getMessages;
+      return this.getAllMessages();
     },
+		checkMessages() {
+			return this.messages ? true : false
+		},
     receiverUid() {
-      return this.getReceiver;
+      return this.getReceiverUid;
     },
     currentUserUid() {
       return auth.currentUser.uid;
     },
   },
-	// watch: {
-	// 	getReceiver : function() {
-	// 		this.componentKey += 1
-	// 	}
-	// },
-  mounted() {
-    this.pullChatMessage();
+  watch: {
+    messages: function() {
+      const [el] = this.$refs[`${Math.max()}`];
+      if (el) {
+        el.scrollIntoView();
+      }
+    },
   },
 };
 </script>

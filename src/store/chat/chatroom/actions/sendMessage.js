@@ -20,16 +20,21 @@ const sendMessage = (context, message) => {
           image: message.image,
           sender: auth.currentUser.uid,
           receiver: context.state.uid,
-					time: message.time
+					time: message.time,
+					timestamp: message.timestamp
         });
-      })
+      }).then(() => {
+				context.dispatch('chatMessage')
+				context.dispatch('receivedMessage')
+			})
       .catch((err) => console.log(err));
   } else {
     dbf.collection("messages").add({
       message: message.message,
       sender: auth.currentUser.uid,
       receiver: context.state.uid,
-			time: message.time
+			time: message.time,
+			timestamp: message.timestamp
     });
   }
 };

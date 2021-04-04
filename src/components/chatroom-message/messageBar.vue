@@ -37,6 +37,7 @@
       type="text"
       placeholder=" Type a message"
       v-model="messageData.message"
+      @keyup.enter="messageSent"
     />
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +66,8 @@ export default {
         message: "",
         image: null,
         imageName: "",
-        time: ""
+        time: "",
+        timestamp: ""
       },
     };
   },
@@ -93,16 +95,26 @@ export default {
       console.log(this.messageData.imageName);
     },
     messageSent() {
-      this.messageData.time = new Date().toLocaleTimeString();
-      console.log(this.messageData);
-      this.sendMessage(this.messageData).then(() => {
-        this.messageData = {
-          message: "",
-          image: null,
-          imageName: "",
-          time: ""
-        };
+      if (this.messageData.message !== "") {
+        this.messageData.time = new Date().toLocaleTimeString();
+              this.messageData.timestamp =  Date.now();
+              console.log(this.messageData);
+              this.sendMessage(this.messageData).then(() => {
+                this.messageData = {
+                  message: "",
+                  image: null,
+                  imageName: "",
+                  time: "",
+                  timestamp: ""
+                };
+          });
+      } else if (this.messageData.message === "") {
+        Vue.toasted.show("Can't send an empty message", {
+        position: "top-right",
+        duration: 4000,
       });
+      }
+      
     },
   },
 };

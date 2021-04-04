@@ -8,7 +8,8 @@ const state = () => ({
 	imageUrl: '',
 	name: '',
 	uid: '',
-	chatData: null
+	chatData: null,
+	receivedChatData: null
 })
 
 export default {

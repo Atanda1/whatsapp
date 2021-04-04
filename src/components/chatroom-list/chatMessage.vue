@@ -63,14 +63,19 @@ export default {
   methods: {
     ...mapActions({
       uploadChatInfo: "displayChatInfo",
-      pullChatMessage: "chatMessage"
+      pullChatMessage: "chatMessage",
+      receivedChat: "receivedChatMessages"
       }),
     openMessage(imageUrl, name, uid) {
       console.log(imageUrl, name, uid)
       this.uploadChatInfo({imageUrl, name, uid})
       this.$root.$emit("passChatData", imageUrl, name, uid)
       this.$root.$emit("passChatUserData", imageUrl, name, uid)
-      this.pullChatMessage();
+      this.pullMessages(); 
+    },
+    pullMessages() {
+      this.receivedChat()
+      this.pullChatMessage()
     }
   }
 };

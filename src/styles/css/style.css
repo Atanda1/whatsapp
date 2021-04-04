@@ -456,6 +456,7 @@ table {
 }
 .Chatroom__details__chat {
   height: 75vh;
+  max-height: 75vh;
   position: static;
   background-image: url("../../assets/backdrop.jpg");
   background-position: center;
@@ -465,6 +466,7 @@ table {
 }
 .Chatroom__details__chat__image {
   height: 40rem;
+  max-width: 100%;
 }
 .Chatroom__details__chat__received {
   border-radius: 0 1rem 1rem 1rem;

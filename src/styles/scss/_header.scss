@@ -61,6 +61,7 @@
 		}
 		&__chat {
 			height: 75vh;
+			max-height:75vh;
 			position: static;
 			background-image: url('../../assets/backdrop.jpg');
 			background-position: center;
@@ -69,6 +70,7 @@
 			padding: 3rem 8rem;
 			&__image {
 				height: 40rem;
+				max-width: 100%;
 			}
 			&__received {
 				border-radius: 0 1rem 1rem 1rem;

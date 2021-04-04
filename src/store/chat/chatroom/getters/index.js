@@ -13,11 +13,16 @@ const getChat = (state) => {
 	return state.chatData
 }
 
+const getReceivedChat = (state) => {
+	return state.receivedChatData
+}
+
 const getters = {
 	getImage,
 	getChatInfo,
 	getChat,
-	getReceiverUid
+	getReceiverUid,
+	getReceivedChat
 }
 
 export default getters;
