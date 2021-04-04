@@ -19,6 +19,7 @@ const login = ({ commit }, form) => {
         position: "top-right",
         duration: 4000,
       });
+      commit("loadingStatus", false);
     });
 };
 

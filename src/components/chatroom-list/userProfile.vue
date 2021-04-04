@@ -1,8 +1,6 @@
 <template>
   <div class="Chatroom__list__profile">
-    <div class="Chatroom__list__profile__circle__img">
-      <img class="Chatroom__list__profile__img" :src="userImageUrl" />
-    </div>
+    <img class="Chatroom__list__profile__img" :src="userImageUrl" />
     <svg
       id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6"
       xmlns="http://www.w3.org/2000/svg"

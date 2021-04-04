@@ -40,7 +40,7 @@
 				background-repeat: no-repeat;
 				background-position:  4% 50%;
 				font-size: 1.1rem;
-				font-family: 'Segoe UI';
+				font-family: 'Segoe UI', "Poppins", sans-serif;
 				font-weight: 600;
 				color: $dark-black;
 			}
@@ -54,6 +54,11 @@
 			cursor: pointer;
 			grid-template-columns: 20% 80%;
 			overflow-y: auto;
+			align-items: center;
+			padding: 1rem;
+			@media screen and (max-width: 1500px) {
+				grid-template-columns: 3fr 7fr;
+		 }
 			&__img {
 				padding: .9rem;
 				img {
@@ -64,7 +69,7 @@
 			}
 			&__message {
 				text-align: initial;
-				padding: 1.2rem 1.5rem .6rem 0;
+				padding: 1.2rem 1.5rem 1.2rem 0;
 				border-bottom: 1px solid $dark-light;
 				&__name {
 					font-family: 'Segoe UI';

@@ -67,7 +67,7 @@ export default {
         image: null,
         imageName: "",
         time: "",
-        timestamp: ""
+        timestamp: "",
       },
     };
   },
@@ -95,26 +95,28 @@ export default {
       console.log(this.messageData.imageName);
     },
     messageSent() {
-      if (this.messageData.message !== "") {
+      if (
+        this.messageData.imageName === "" &&
+        this.messageData.message === ""
+      ) {
+        Vue.toasted.show("Can't send empty message", {
+          position: "top-right",
+          duration: 4000,
+        });
+      } else {
         this.messageData.time = new Date().toLocaleTimeString();
-              this.messageData.timestamp =  Date.now();
-              console.log(this.messageData);
-              this.sendMessage(this.messageData).then(() => {
-                this.messageData = {
-                  message: "",
-                  image: null,
-                  imageName: "",
-                  time: "",
-                  timestamp: ""
-                };
-          });
-      } else if (this.messageData.message === "") {
-        Vue.toasted.show("Can't send an empty message", {
-        position: "top-right",
-        duration: 4000,
-      });
+        this.messageData.timestamp = Date.now();
+        console.log(this.messageData);
+        this.sendMessage(this.messageData).then(() => {
+          this.messageData = {
+            message: "",
+            image: null,
+            imageName: "",
+            time: "",
+            timestamp: "",
+          };
+        });
       }
-      
     },
   },
 };

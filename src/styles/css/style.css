@@ -87,19 +87,19 @@ table {
   font-family: "Segoe UI Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Regular"), url("../../font/SegoeUI.woff") format("woff");
+  src: local("Segoe UI Regular"), url("https://github.com/Atanda1/whatsapp/blob/master/src/font/SegoeUI.woff") format("woff");
 }
 @font-face {
   font-family: "Segoe UI Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Italic"), url("../../font/SegoeUIItalic.woff") format("woff");
+  src: local("Segoe UI Italic"), url("https://github.com/Atanda1/whatsapp/blob/master/src/font/SegoeUIItalic.woff") format("woff");
 }
 @font-face {
   font-family: "Segoe UI Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("Segoe UI Bold"), url("../../font/SegoeUIBold.woff") format("woff");
+  src: local("Segoe UI Bold"), url("https://github.com/Atanda1/whatsapp/blob/master/src/font/SegoeUIBold.woff") format("woff");
 }
 .mr-auto {
   margin-right: auto;
@@ -260,7 +260,7 @@ table {
   background-repeat: no-repeat;
   background-position: 4% 50%;
   font-size: 1.1rem;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", "Poppins", sans-serif;
   font-weight: 600;
   color: #131C21;
 }
@@ -273,6 +273,13 @@ table {
   cursor: pointer;
   grid-template-columns: 20% 80%;
   overflow-y: auto;
+  align-items: center;
+  padding: 1rem;
+}
+@media screen and (max-width: 1500px) {
+  .Chatroom__list__messages {
+    grid-template-columns: 3fr 7fr;
+  }
 }
 .Chatroom__list__messages__img {
   padding: 0.9rem;
@@ -284,7 +291,7 @@ table {
 }
 .Chatroom__list__messages__message {
   text-align: initial;
-  padding: 1.2rem 1.5rem 0.6rem 0;
+  padding: 1.2rem 1.5rem 1.2rem 0;
   border-bottom: 1px solid #2A2F32;
 }
 .Chatroom__list__messages__message__name {
@@ -388,6 +395,8 @@ table {
   font-weight: 400;
   padding: 1rem 1.3rem;
   margin-bottom: 2rem;
+  cursor: pointer;
+  color: white;
 }
 .Signup__shell__inner__button img {
   height: 1.5rem;
@@ -399,6 +408,7 @@ table {
   color: #075E54;
   margin-top: 0.5rem;
   text-decoration-line: underline;
+  color: white;
 }
 
 .Chatroom__details__userprofile, .Chatroom__list__profile {
@@ -460,7 +470,8 @@ table {
   position: static;
   background-image: url("../../assets/backdrop.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow-y: auto;
   padding: 3rem 8rem;
 }
@@ -511,9 +522,14 @@ table {
     grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 43vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
   }
 }
+@media screen and (max-width: 1500px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 48vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
 @media screen and (min-width: 2000px) {
   .container {
-    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 28vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
   }
 }
 

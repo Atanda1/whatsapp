@@ -65,7 +65,8 @@
 			position: static;
 			background-image: url('../../assets/backdrop.jpg');
 			background-position: center;
-			background-size: contain;
+			background-size: cover;
+    	background-repeat: no-repeat;
 			overflow-y: auto;
 			padding: 3rem 8rem;
 			&__image {

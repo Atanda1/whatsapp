@@ -5,8 +5,8 @@
       v-for="result in resultQuery"
       :key="result.image"
     >
-      <div class="Chatroom__list__messages__img">
-        <img :src="result.image" />
+      <div class="Chatroom__list__messages__img" :style="{backgroundImage: `url(${result.image})`}">
+        <!-- <img :src="result.image" /> -->
       </div>
       <div class="Chatroom__list__messages__message" @click="openMessage(result.image, result.name, result.uid)">
         <div class="Chatroom__list__messages__message__name">
@@ -82,4 +82,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.Chatroom__list__messages__img {
+  width: 3rem;
+    height: 3rem;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 60px;
+    -moz-background-clip: padding;
+    border-radius: 60px;
+    background-clip: padding-box;
+    /* margin: 7px 0 0 5px; */
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+}
+</style>
