@@ -28,6 +28,11 @@ time, mark, audio, video {
 html {
   font-size: 70%;
 }
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 60%;
+  }
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -278,7 +283,7 @@ table {
 }
 @media screen and (max-width: 1500px) {
   .Chatroom__list__messages {
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 2fr 7fr;
   }
 }
 .Chatroom__list__messages__img {

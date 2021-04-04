@@ -51,9 +51,9 @@ time, mark, audio, video {
 
 html {
     font-size: 70%;
-    // @media screen and (max-width: 95em) {
-    //    font-size: 55%;
-    // }
+    @media screen and (max-width: 1300px) {
+       font-size: 60%;
+    }
     
 }
 /* HTML5 display-role reset for older browsers */
