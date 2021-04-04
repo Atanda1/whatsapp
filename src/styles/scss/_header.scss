@@ -92,9 +92,16 @@
 			background-color: $dark-black;
 			padding: .8rem 1rem;
 			align-items: center;
-			&__image-upload {
+			svg {
+				cursor: pointer;
+			}
+			&__image-upload {	
+				svg {
+					cursor: pointer;
+				}
 				> input{
 					display: none;
+					cursor: pointer;
 				}	
 			}
 		}

@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="Chatroom__list__messages__message__details">
-          message from supreme
+          
         </div>
       </div>
     </div>
@@ -62,13 +62,15 @@ export default {
   },
   methods: {
     ...mapActions({
-      uploadChatInfo: "displayChatInfo"
+      uploadChatInfo: "displayChatInfo",
+      pullChatMessage: "chatMessage"
       }),
     openMessage(imageUrl, name, uid) {
       console.log(imageUrl, name, uid)
       this.uploadChatInfo({imageUrl, name, uid})
       this.$root.$emit("passChatData", imageUrl, name, uid)
       this.$root.$emit("passChatUserData", imageUrl, name, uid)
+      this.pullChatMessage();
     }
   }
 };

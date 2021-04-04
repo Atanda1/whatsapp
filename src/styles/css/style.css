@@ -270,6 +270,7 @@ table {
 .Chatroom__list__messages {
   background-color: #131C21;
   display: grid;
+  cursor: pointer;
   grid-template-columns: 20% 80%;
   overflow-y: auto;
 }
@@ -479,8 +480,15 @@ table {
   padding: 0.8rem 1rem;
   align-items: center;
 }
+.Chatroom__details__message svg {
+  cursor: pointer;
+}
+.Chatroom__details__message__image-upload svg {
+  cursor: pointer;
+}
 .Chatroom__details__message__image-upload > input {
   display: none;
+  cursor: pointer;
 }
 
 .header__heading-1 {

@@ -7,7 +7,8 @@ const state = () => ({
 	userImage : '',
 	imageUrl: '',
 	name: '',
-	uid: ''
+	uid: '',
+	chatData: null
 })
 
 export default {

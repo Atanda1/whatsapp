@@ -51,6 +51,7 @@
 		&__messages {
 			background-color: $dark-black;
 			display: grid;
+			cursor: pointer;
 			grid-template-columns: 20% 80%;
 			overflow-y: auto;
 			&__img {

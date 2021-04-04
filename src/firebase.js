@@ -7,12 +7,13 @@ import 'firebase/storage'
 // firebase init - add your own config here
 const firebaseConfig = {
 	apiKey: process.env.VUE_APP_APIKEY,
-    authDomain: "whatsapp-clone-42b4f.firebaseapp.com",
-    projectId: "whatsapp-clone-42b4f",
-    storageBucket: "whatsapp-clone-42b4f.appspot.com",
-    messagingSenderId: "51012903476",
-    appId: "1:51012903476:web:abd443a8ff094d807fe061",
-    measurementId: "G-QFG330B17J"
+    authDomain: process.env.VUE_APP_AUTHDOMAIN,
+    projectId: process.env.VUE_APP_PROJECTID,
+    databaseURL: process.env.VUE_APP_DATABASEURL,
+    storageBucket: process.env.VUE_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.VUE_APP_SENDERID,
+    appId: process.env.VUE_APP_APPID,
+    measurementId: process.env.VUE_APP_MEASUREMENTID
 }
 
 firebase.initializeApp(firebaseConfig);
