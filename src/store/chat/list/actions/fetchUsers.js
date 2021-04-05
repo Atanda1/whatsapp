@@ -9,11 +9,8 @@ const fetchUsers = ({ commit }) => {
       const usersArray = [];
       const newUsersArray = [];
       querySnapshot.docs.map((doc) => {
-          usersArray.push(doc.data());
-          console.log(doc.data());
-        
+          usersArray.push(doc.data());       
       });
-      console.log(usersArray)
       for (let users of usersArray) {        
         if(users.uid === auth.currentUser.uid) continue
         newUsersArray.push(users);

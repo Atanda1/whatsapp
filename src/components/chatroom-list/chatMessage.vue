@@ -55,7 +55,6 @@ export default {
             .every((v) => item.name.toLowerCase().includes(v));
         });
       } else {
-        console.log(this.getUsersChatData);
         return this.getUsersChatData;
       }
     },
@@ -67,7 +66,6 @@ export default {
       receivedChat: "receivedChatMessages"
       }),
     openMessage(imageUrl, name, uid) {
-      console.log(imageUrl, name, uid)
       this.uploadChatInfo({imageUrl, name, uid})
       this.$root.$emit("passChatData", imageUrl, name, uid)
       this.$root.$emit("passChatUserData", imageUrl, name, uid)

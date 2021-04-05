@@ -37,18 +37,10 @@ export default {
     scrollDown() {
       const content = this.$refs.container;
 			content.scrollTop = content.scrollHeight;
-			console.log(content.scrollTop);
-      console.log(content.scrollHeight);
     },
     getAllMessages() {
-      // const totalMessages = []
-      console.log(this.getMessages);
-      console.log(this.getReceiverMessage);
       if (this.getMessages && this.getReceiverMessage) {
         const totalMessages = this.getMessages.concat(this.getReceiverMessage);
-        console.log(
-          totalMessages.sort((a, b) => new Date(b.time) - new Date(a.time))
-        );
         return totalMessages.sort((a, b) => a.timestamp - b.timestamp);
       }
     },

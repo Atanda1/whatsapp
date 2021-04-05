@@ -10,7 +10,6 @@ const uploadData = ({ commit, dispatch }, form) => {
   task
     .then((snapshot) => snapshot.ref.getDownloadURL())
     .then((url) => {
-      console.log(url);
       form.image = url;
     })
     .then(() => dispatch("signup", form));

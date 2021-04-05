@@ -28,7 +28,6 @@ export default {
       chatData: "getChatInfo",
     }),
     chatInfo() {
-      console.log(this.chatData);
       return this.chatData;
     },
   },

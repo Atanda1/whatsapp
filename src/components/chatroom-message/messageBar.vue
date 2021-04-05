@@ -92,7 +92,6 @@ export default {
         position: "top-right",
         duration: 4000,
       });
-      console.log(this.messageData.imageName);
     },
     messageSent() {
       if (
@@ -106,7 +105,6 @@ export default {
       } else {
         this.messageData.time = new Date().toLocaleTimeString();
         this.messageData.timestamp = Date.now();
-        console.log(this.messageData);
         this.sendMessage(this.messageData).then(() => {
           this.messageData = {
             message: "",

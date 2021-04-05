@@ -9,7 +9,6 @@ const currentUserImage = ({commit}) => {
         .get()
     
     .then((data) => {
-		console.log(data.data().image)
 		commit("setImage", data.data().image)
 	})
     .catch((err) => {

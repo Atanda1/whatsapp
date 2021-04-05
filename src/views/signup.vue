@@ -115,7 +115,6 @@ export default {
       this.formData.imageName = fileName.split("\\").pop();
     },
     signup() {
-      console.log(this.formData)
       this.upload({
         email: this.formData.email,
         password: this.formData.password,

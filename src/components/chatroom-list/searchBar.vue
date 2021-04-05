@@ -17,8 +17,7 @@ export default {
     };
   },
   watch: {
-    searchQuery: function(newValue, oldValue) {
-      console.log(newValue, oldValue);
+    searchQuery: function(newValue) {
       this.$root.$emit("searchParam", newValue);
     },
   },

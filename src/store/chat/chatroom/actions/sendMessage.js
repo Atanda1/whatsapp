@@ -10,7 +10,6 @@ const sendMessage = (context, message) => {
     task
       .then((snapshot) => snapshot.ref.getDownloadURL())
       .then((url) => {
-        console.log(url);
         message.image = url;
       })
       .then(() => {
