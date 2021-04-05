@@ -57,7 +57,7 @@
       grid-template-columns: 20% 80%;
       overflow-y: auto;
       align-items: center;
-      padding: 1rem;
+      padding: .8rem;
       @media screen and (max-width: 1500px) {
         grid-template-columns: 2fr 7fr;
       }

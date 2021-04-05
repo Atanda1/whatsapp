@@ -281,7 +281,7 @@ table {
   grid-template-columns: 20% 80%;
   overflow-y: auto;
   align-items: center;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 @media screen and (max-width: 1500px) {
   .Chatroom__list__messages {

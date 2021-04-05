@@ -82,8 +82,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Chatroom__list__messages__img {
-  width: 3rem;
-    height: 3rem;
+  width: 4rem;
+    height: 4rem;
     -webkit-border-radius: 60px;
     -webkit-background-clip: padding-box;
     -moz-border-radius: 60px;
@@ -94,5 +94,6 @@ export default {
     align-items: center;
     background-size: cover;
     background-position: center center;
+    margin: 0 auto;
 }
 </style>
