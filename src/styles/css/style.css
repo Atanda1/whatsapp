@@ -17,6 +17,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   font: inherit;
   vertical-align: baseline;
   margin-block-start: 0;
@@ -476,8 +477,7 @@ table {
   font-weight: 500;
 }
 .Chatroom__details__chat {
-  height: 75vh;
-  max-height: 75vh;
+  height: 82.18vh;
   position: static;
   background-image: url("../../assets/backdrop.jpg");
   background-position: center;
