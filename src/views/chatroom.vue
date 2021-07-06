@@ -1,13 +1,12 @@
 <template>
-  <div class="Chat__Room">
-    <transition name="fade">
-      <div class="container">
-        <div class="Chatroom">
-          <chatroom-list :userImageUrl="userImageUrl" :getUsersChatData="getUsersChatData" />
-          <chatroom-message/>
-        </div>
-      </div>
-    </transition>
+  <div class="container">
+    <div class="Chatroom">
+      <chatroom-list
+        :userImageUrl="userImageUrl"
+        :getUsersChatData="getUsersChatData"
+      />
+      <chatroom-message />
+    </div>
   </div>
 </template>
 
@@ -63,7 +62,7 @@ export default {
   created() {
     this.image();
     this.usersData();
-  }
+  },
 };
 </script>
 
