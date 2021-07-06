@@ -25,4 +25,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # whatsapp
 
-A clone of the whatsapp web built on vue and firebase with the main features
+A clone of the whatsapp web built on vue and firebase with the main features. Check [here](https://t.co/F6wuhEu0VL?amp=1)
