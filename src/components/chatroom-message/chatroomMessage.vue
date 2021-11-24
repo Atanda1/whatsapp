@@ -16,24 +16,29 @@ import ChatDetails from "./chatDetails.vue";
 import ChatProfile from "./chatProfile.vue";
 import MessageBar from "./messageBar.vue";
 import PlaceholderPage from './placeholderPage.vue'
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters } = createNamespacedHelpers("chat/chatroom");
 
 export default {
   name: "ChatroomMessage",
-  data() {
-    return {
-      uid: null
-    }
-  },
+  // data() {
+  //   return {
+  //     uid: null
+  //   }
+  // },
   computed: {
+    ...mapGetters({
+      chatInfo: "getChatInfo",
+    }),
     show() {
-      return this.uid ? true : false;
+      return this.chatInfo.uid !== '' ? true : false;
     },
   },
-  mounted() {
-    this.$root.$on("passChatData", (imageUrl, name, uid) => {
-      this.uid = uid;
-    });
-  },
+  // mounted() {
+  //   this.$root.$on("passChatData", (imageUrl, name, uid) => {
+  //     this.uid = uid;
+  //   });
+  // },
   components: {
     ChatProfile,
     ChatDetails,

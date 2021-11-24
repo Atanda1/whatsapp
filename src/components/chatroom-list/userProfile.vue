@@ -1,11 +1,9 @@
 <template>
   <div class="Chatroom__list__profile">
-    <!-- <img class="Chatroom__list__profile__img" :src="userImageUrl" /> -->
     <div
       class="Chatroom__list__profile__img"
       :style="{ backgroundImage: `url(${userImageUrl})` }"
     >
-      <!-- <img :src="result.image" /> -->
     </div>
     <svg
       id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6"
