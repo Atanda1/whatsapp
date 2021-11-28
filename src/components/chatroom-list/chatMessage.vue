@@ -67,8 +67,6 @@ export default {
       }),
     openMessage(imageUrl, name, uid) {
       this.uploadChatInfo({imageUrl, name, uid})
-      //this.$root.$emit("passChatData", imageUrl, name, uid)
-      //this.$root.$emit("passChatUserData", imageUrl, name, uid)
       this.pullMessages(); 
     },
     pullMessages() {

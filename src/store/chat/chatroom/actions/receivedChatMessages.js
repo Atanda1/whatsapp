@@ -1,6 +1,6 @@
 import { dbf, auth } from "../../../../firebase";
 
-const receivedMessage = (context) => {
+const receivedChatMessages = (context) => {
 	dbf
 	.collection("messages")
 	.where("sender", "==", context.state.uid)
@@ -14,4 +14,4 @@ const receivedMessage = (context) => {
 	})
 }
 
-export default receivedMessage;
+export default receivedChatMessages;

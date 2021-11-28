@@ -25,15 +25,11 @@
 <script>
 import { createNamespacedHelpers } from "vuex";
 import { auth } from "../../firebase";
-const { mapActions, mapGetters } = createNamespacedHelpers("chat/chatroom");
+const { mapGetters } = createNamespacedHelpers("chat/chatroom");
 
 export default {
   name: "ChatDetails",
   methods: {
-    ...mapActions({
-      pullChatMessage: "chatMessage",
-      receivedChat: "receivedChatMessages",
-    }),
     scrollDown() {
       const content = this.$refs.container;
 			content.scrollTop = content.scrollHeight;
@@ -61,11 +57,11 @@ export default {
     messages() {
       return this.getAllMessages();
     },
-		checkMessages() {
-			return this.messages ? true : false
-		},
+		// checkMessages() {
+		// 	return this.messages ? true : false
+		// },
     receiverUid() {
-      return this.getReceiverUid;
+      return this.getReceiver;
     },
     currentUserUid() {
       return auth.currentUser.uid;

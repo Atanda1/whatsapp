@@ -22,10 +22,7 @@ const sendMessage = (context, message) => {
 					time: message.time,
 					timestamp: message.timestamp
         });
-      }).then(() => {
-				context.dispatch('chatMessage')
-				context.dispatch('receivedMessage')
-			})
+      })
       .catch((err) => console.log(err));
   } else {
     dbf.collection("messages").add({
